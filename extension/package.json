@@ -1,0 +1,11 @@
+{
+  "name": "antidistract-extension",
+  "version": "2.0.0",
+  "private": true,
+  "description": "AntiDistract Browser Extension",
+  "scripts": {
+    "build": "echo 'No build step needed — vanilla JS'",
+    "dev": "echo 'Load unpacked extension from chrome://extensions'"
+  },
+  "devDependencies": {}
+}

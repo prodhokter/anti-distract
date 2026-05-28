@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AntiDistract</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+<div class="header">
+  <div class="logo">AD</div>
+  <div class="title-group">
+    <h1>AntiDistract</h1>
+    <span class="version">v2.1</span>
+  </div>
+  <div class="status-dot" id="status-dot" title="Status koneksi"></div>
+</div>
+
+<div class="card focus-card" id="focus-card">
+  <div class="card-label">Focus Mode</div>
+  <div class="focus-status-row">
+    <span class="badge off" id="focus-badge">OFF</span>
+    <span class="timer-text" id="timer-text">&mdash;</span>
+  </div>
+  <div class="progress-track">
+    <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+  </div>
+  <div class="phase-text" id="phase-text"></div>
+</div>
+
+<div class="card" id="stats-card">
+  <div class="card-label">Statistik Hari Ini</div>
+  <div class="stats-row">
+    <div class="stat">
+      <div class="stat-value" id="stat-focus">0m</div>
+      <div class="stat-label">Fokus</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value" id="stat-blocked">0</div>
+      <div class="stat-label">Diblokir</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value" id="stat-goal">0%</div>
+      <div class="stat-label">Target</div>
+    </div>
+  </div>
+  <div class="goal-bar" id="goal-bar-section">
+    <div class="goal-label">Target Harian: <span id="goal-text">0/120 mnt</span></div>
+    <div class="goal-track">
+      <div class="goal-fill" id="goal-fill" style="width: 0%"></div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-label">Situs Diblokir</div>
+  <div class="block-count" id="block-count">0 domain aktif</div>
+  <div class="block-tags" id="block-tags"></div>
+</div>
+
+<div class="card">
+  <div class="card-label">Quick Actions</div>
+  <div class="btn-row">
+    <button class="btn-pause" id="btn-pause-5" disabled>Jeda 5m</button>
+    <button class="btn-pause" id="btn-pause-15" disabled>Jeda 15m</button>
+    <button class="btn-pause" id="btn-pause-30" disabled>Jeda 30m</button>
+  </div>
+</div>
+
+<div class="footer">
+  <span>Buka <a href="#" id="open-app">AntiDistract App</a> untuk kontrol penuh</span>
+</div>
+
+<script type="module" src="popup.js"></script>
+</body>
+</html>

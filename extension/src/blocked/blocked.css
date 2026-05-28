@@ -1,0 +1,120 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #080b12;
+  color: #e2e8f0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  text-align: center;
+  padding: 40px;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 440px;
+}
+
+.icon {
+  font-size: 72px;
+  margin-bottom: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #6c63ff;
+  margin-bottom: 10px;
+}
+
+.url {
+  color: #ff6584;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  word-break: break-all;
+  opacity: 0.9;
+}
+
+.quote {
+  font-size: 14px;
+  color: #94a3b8;
+  font-style: italic;
+  margin-bottom: 16px;
+  line-height: 1.5;
+  min-height: 42px;
+  transition: opacity 0.5s;
+}
+
+.message {
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.timer-section {
+  margin-bottom: 20px;
+}
+
+.timer-label {
+  font-size: 11px;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  margin-bottom: 6px;
+}
+
+.countdown {
+  font-size: 36px;
+  font-weight: 200;
+  font-variant-numeric: tabular-nums;
+  color: #e2e8f0;
+}
+
+.btn-back {
+  padding: 12px 32px;
+  background: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+.btn-back:hover { background: #7c74ff; transform: scale(1.02); }
+.btn-back:active { transform: scale(0.98); }
+
+.streak-info {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* Background ambient effect */
+body::before {
+  content: "";
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(ellipse at center, rgba(108, 99, 255, 0.03) 0%, transparent 70%);
+  animation: rotate 30s linear infinite;
+  z-index: -1;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

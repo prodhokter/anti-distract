@@ -1,0 +1,4 @@
+PyQt6>=6.8.0
+opencv-python>=4.10.0
+websockets>=14.0
+pyqtgraph>=0.13.0
